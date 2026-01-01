@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Судьбоносный Аркан",
+    "type": "spell",
+    "system": {
+      "description": {
+        "value": "<p>Вы сплетаете нить судьбы в сгусток предопределённой энергии и бросаете её во врага. Совершите дальнобойную атаку заклинанием по существу в пределах дистанции.</p><p><strong>При попадании:</strong> цель получает 1к6 урона силовым полем (универсальная магическая энергия).</p><p><strong>Затем вы тянете Аркан:</strong> определите, какой Старший Аркан проявится. Бросьте 1к12 и 1к10 для координат или используйте встроенную таблицу модуля.</p><p><strong>Улучшение заговора:</strong> Урон увеличивается на 1к6 на 5, 11 и 17 уровнях.</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Fateful Tarot Module",
+      "activation": {
+        "type": "action",
+        "cost": 1,
+        "condition": ""
+      },
+      "duration": {
+        "value": "",
+        "units": "inst"
+      },
+      "target": {
+        "value": 1,
+        "width": null,
+        "units": "",
+        "type": "creature"
+      },
+      "range": {
+        "value": 60,
+        "long": null,
+        "units": "ft"
+      },
+      "uses": {
+        "value": null,
+        "max": "",
+        "per": null,
+        "recovery": ""
+      },
+      "consume": {
+        "type": "",
+        "target": null,
+        "amount": null
+      },
+      "ability": "spell",
+      "actionType": "rsak",
+      "attackBonus": "0",
+      "chatFlavor": "",
+      "critical": {
+        "threshold": null,
+        "damage": ""
+      },
+      "damage": {
+        "parts": [
+          [
+            "1d6",
+            "force"
+          ]
+        ],
+        "versatile": ""
+      },
+      "formula": "",
+      "save": {
+        "ability": "",
+        "dc": null,
+        "scaling": "spell"
+      },
+      "level": 0,
+      "school": "evo",
+      "components": {
+        "vocal": true,
+        "somatic": true,
+        "material": false,
+        "ritual": false,
+        "concentration": false
+      },
+      "materials": {
+        "value": "",
+        "consumed": false,
+        "cost": 0,
+        "supply": 0
+      },
+      "preparation": {
+        "mode": "prepared",
+        "prepared": false
+      },
+      "scaling": {
+        "mode": "cantrip",
+        "formula": "1d6"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "fateful-tarot": {
+        "isTarotSpell": true,
+        "version": "1.0"
+      }
+    },
+    "_stats": {
+      "systemId": "dnd5e",
+      "systemVersion": "2.3.0",
+      "coreVersion": "11.315",
+      "createdTime": 1679432400000,
+      "modifiedTime": 1679432400000,
+      "lastModifiedBy": "fateful-tarot"
+    },
+    "_key": "!modules!fateful-tarot!packs!spells.db!item!1"
+  }
+]

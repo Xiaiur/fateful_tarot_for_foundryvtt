@@ -1,0 +1,157 @@
+/* Основные стили карт Таро */
+.fateful-tarot-card {
+  background: linear-gradient(145deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  border: 3px solid #8b7355;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px 0;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.fateful-tarot-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(120, 119, 198, 0.1) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.tarot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.tarot-header h2 {
+  margin: 0;
+  color: #d4af37;
+  font-size: 1.4em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.coordinates {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-family: monospace;
+  font-size: 1.1em;
+  color: #9cdcfe;
+  border: 1px solid #569cd6;
+}
+
+.tarot-content {
+  position: relative;
+  z-index: 1;
+}
+
+.attack-info {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid;
+}
+
+.roll-result.hit {
+  border-left-color: #4CAF50;
+  color: #a5d6a7;
+}
+
+.roll-result.miss {
+  border-left-color: #f44336;
+  color: #ef9a9a;
+}
+
+.damage-info {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  color: #ffcc80;
+}
+
+.arcana-effect {
+  background: rgba(139, 115, 85, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #8b7355;
+}
+
+.arcana-effect h3 {
+  margin-top: 0;
+  color: #ffd700;
+  font-size: 1.2em;
+}
+
+.effect-description {
+  font-style: italic;
+  line-height: 1.5;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border-left: 3px solid #9c27b0;
+}
+
+.coordinate-grid {
+  text-align: center;
+  margin-top: 15px;
+  color: #90a4ae;
+  font-size: 0.9em;
+}
+
+.tarot-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9em;
+  color: #b0bec5;
+}
+
+.caster {
+  color: #80deea;
+}
+
+.target {
+  color: #ffab91;
+}
+
+/* Анимации */
+@keyframes tarotDraw {
+  0% { transform: scale(0) rotate(-180deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.fateful-tarot-card {
+  animation: tarotDraw 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Стили для разных Арканов */
+.fateful-tarot-card.0 { border-color: #FFEB3B; } /* Шут */
+.fateful-tarot-card.1 { border-color: #2196F3; } /* Маг */
+.fateful-tarot-card.13 { border-color: #000000; } /* Смерть */
+.fateful-tarot-card.21 { border-color: #FFFFFF; } /* Мир */
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .tarot-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .coordinates {
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,39 @@
+<div class="fateful-tarot-card {{arcana.number}}">
+  <div class="tarot-header">
+    <h2>{{arcana.fullName}}</h2>
+    <div class="coordinates">[{{arcana.coordinates.x}}, {{arcana.coordinates.y}}]</div>
+  </div>
+  
+  <div class="tarot-content">
+    <div class="attack-info">
+      <div class="roll-result {{#if isHit}}hit{{else}}miss{{/if}}">
+        <strong>Атака:</strong> {{attackRoll.total}} {{#if isHit}}✅{{else}}❌{{/if}}
+      </div>
+      {{#if isHit}}
+      <div class="damage-info">
+        <strong>Урон:</strong> {{damageRoll.total}} ({{damageRoll.formula}})
+      </div>
+      {{/if}}
+    </div>
+    
+    <div class="arcana-effect">
+      <h3>Эффект Аркана #{{effect.number}}</h3>
+      <div class="effect-description">
+        {{effect.description}}
+      </div>
+    </div>
+    
+    {{#if arcana.coordinates}}
+    <div class="coordinate-grid">
+      <small>Координатная сетка: 12×10</small>
+    </div>
+    {{/if}}
+  </div>
+  
+  <div class="tarot-footer">
+    <div class="caster">{{actor.name}}</div>
+    {{#if target}}
+    <div class="target">→ {{target.name}}</div>
+    {{/if}}
+  </div>
+</div>

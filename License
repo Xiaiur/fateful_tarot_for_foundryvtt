@@ -1,0 +1,19 @@
+## 7. Пакет для релиза
+
+Создайте `build.js` для сборки:
+
+```javascript
+const fs = require('fs-extra');
+const zip = require('adm-zip');
+
+// Копируем файлы в dist
+fs.copySync('.', 'dist/fateful-tarot', {
+  filter: (src) => !src.includes('node_modules') && !src.includes('.git')
+});
+
+// Создаем zip
+const zipFile = new zip();
+zipFile.addLocalFolder('dist/fateful-tarot');
+zipFile.writeZip('fateful-tarot.zip');
+
+console.log('Модуль собран!');
