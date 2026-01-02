@@ -4,7 +4,7 @@
 
 ## Установка
 
-1. Скопируйте ссылку манифеста: `https://raw.githubusercontent.com/ваш-репозиторий/fateful-tarot/main/module.json`
+1. Скопируйте ссылку манифеста: `https://raw.githubusercontent.com/Xiaiur/fateful_tarot_for_foundryvtt/main/module.json`
 2. В Foundry VTT перейдите в Setup → Add-on Modules → Install Module
 3. Вставьте ссылку и установите
 4. Активируйте модуль в мире
